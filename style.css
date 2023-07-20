@@ -1,0 +1,198 @@
+:root {
+  --primario: #ef233c;
+  --blanco: #edf2f4;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--blanco);
+}
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primario);
+}
+
+.nav-text {
+  display: flex;
+}
+
+.nav-text a {
+  color: black;
+  margin: 0px 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.nav-text a:hover {
+  border-bottom: 2px solid black;
+}
+
+.navbar--activo,
+.navbar:hover {
+  color: #edf2f4;
+}
+
+.intro {
+  height: 100%;
+  width: 100%;
+  min-height: 90vh;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.intro-text h1 {
+  font-size: 80px;
+}
+
+button {
+  width: 140px;
+  border: 1px solid red;
+  border-radius: 7px;
+  padding: 10px 10px;
+  background: var(--primario);
+  color: var(--blanco);
+  margin-top: 15px;
+}
+
+button a {
+  color: var(--blanco);
+}
+
+.intro-vid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-box {
+  position: absolute;
+  background-color: var(--primario);
+  border-radius: 20px;
+  height: 300px;
+  width: 450px;
+  z-index: -1;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-right: 15px;
+}
+
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* Escuderias */
+
+.image_slider {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.image_slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image_slider .slide.active {
+  opacity: 1; /* Cuando el slide tiene la clase .active, mostramos el slide estableciendo la opacidad a 1 */
+}
+
+.image_slider .slide img {
+  z-index: 1;
+  border-radius: 5px;
+  flex: 1;
+  transition: transform 0.5s ease; /* Agregamos una transición para la imagen */
+}
+
+.image_slider .slide.active img {
+  transform: scale(
+    1.1
+  ); /* Aumentamos el tamaño de la imagen en el slide activo */
+}
+
+.image_slider .slide .info_slide {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+  background-color: var(
+    --blanco
+  ); /* Fondo semi-transparente para resaltar el texto */
+}
+
+.image_slider .slide .info_slide h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.image_slider .slide .info_slide p {
+  font-size: 20px;
+}
+
+.image_slider .nav_esc {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 150px;
+  left: 25%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+
+.image_slider .nav_esc .btn {
+  background: var(--primario);
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.image_slider .nav_esc .btn.active {
+  background: #540f1e;
+}
+
+.p_red_bull {
+  margin-left: 10px;
+}
