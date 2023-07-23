@@ -50,6 +50,7 @@ header {
 }
 
 .intro {
+  margin-top: 50px;
   height: 100%;
   width: 100%;
   min-height: 90vh;
@@ -82,6 +83,14 @@ button a {
   color: var(--blanco);
 }
 
+details summary::marker {
+  content: "⮞ ";
+  color: red;
+  font-size: 1.5rem;
+}
+
+
+
 .intro-vid {
   position: relative;
   display: flex;
@@ -113,6 +122,7 @@ button a {
 }
 
 /* Escuderias */
+
 
 .image_slider {
   height: 100vh;
@@ -196,3 +206,19 @@ button a {
 .p_red_bull {
   margin-left: 10px;
 }
+
+/*leyendas*/
+
+.contenido {
+  padding:  150px;
+  margin-top: 1px; /* Margen superior para separar del header */
+}
+
+/*glosario*/
+
+.tabla-gl {
+  padding: 10px;
+  margin: 70px;
+  border-color: #ef233c;
+}
+
